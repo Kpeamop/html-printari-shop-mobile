@@ -1,0 +1,206 @@
+@import (less) "shop-config.less";
+
+.menu{
+ background: @color-gray;
+ height: @scale*45px;
+ position: relative;
+
+ > div{ /*кнопка меню, три полоски*/
+  display: inline-block;
+  border-right: @scale*1px solid white;
+  background: url(/i/mb_menu.png) no-repeat;
+  background-position: center center;
+  width: @scale*60px;
+  height: @scale*45px;
+  background-size: 50%;
+  cursor: pointer;
+ }
+
+ ul{
+  width: @scale*300px;
+  position: absolute;
+  z-index: 10;
+  top: @scale*45px;
+  display: none;
+
+  &.show{
+   display: block;
+  }
+
+  li{
+   height: @scale*20px;
+   border-top: @scale*1px solid #909090;
+   background: rgba(20, 20, 20, .95);
+   padding: @scale*10px;
+   font-family: HelveticaNeueCyr-Roman;
+
+   a{
+    font-size: @scale*16px;
+    color: white;
+    text-decoration: none;
+   }
+
+   &.cats{
+    height: auto;
+    padding: 0;
+
+    >span{
+     font-size: @scale*13px;
+     color: white;
+     padding: @scale*10px @scale*6px;
+     display: inline-block;
+     cursor: pointer;
+
+     &.sel{
+      color: @color-pink;
+     }
+    }
+
+    >div{
+     background: #4b4b4b;
+     display: none;
+
+     .item{
+      cursor: pointer;
+      padding: @scale*5px;
+
+      img{
+       width: @scale*30px;
+       height: @scale*30px;
+       vertical-align: middle;
+       float: left;
+       margin-left: @scale*10px;
+      }
+
+      div{
+       font-size: @scale*14px;
+       border-bottom: @scale*1px solid #939393;
+       padding: @scale*10px 0 @scale*8px 0;
+       color: white;
+       vertical-align: middle;
+       margin-left: @scale*50px;
+
+       text-overflow: ellipsis;
+       overflow: hidden;
+       white-space: nowrap;
+      }
+
+      &:nth-last-of-type(1) div
+       {
+        border: 0;
+       }
+     }
+
+     &.sel{
+      display: block;
+     }
+    }
+   }
+  }
+ }
+
+ .logo{
+  font-family: Pacifico;
+
+  font-size: @scale*28px;
+  line-height: 1.4em;
+  text-decoration: none;
+  margin-left: 0.2em;
+  color: white;
+  vertical-align: top;
+ }
+
+ >button{
+  height: @scale*40px;
+  width: @scale*40px;
+  vertical-align: top;
+  margin: @scale*2px 0;
+  float: right;
+  border: 0;
+  cursor: pointer;
+ }
+
+ button.search{
+  background: url(/i/mb_search.png) no-repeat;
+  background-size: 50%;
+  background-position: center center;
+ }
+
+ button.home{
+  background: url(/i/mb_home.png) no-repeat;
+  background-size: 50%;
+  background-position: center center;
+ }
+
+ button.cart{
+  background: url(/i/mb_cart.png) no-repeat;
+  background-size: 50%;
+  background-position: center center;
+  position: relative;
+
+  .count{
+   color: white;
+   background: @color-pink;
+   border-radius: 50%;
+   position: absolute;
+   z-index: 10;
+   right: 0;
+   top: 0;
+   width: @scale*16px;
+   height: @scale*16px;
+   font-size: @scale*12px;
+  }
+ }
+
+ .wrap-search{
+  width: @scale*290px;
+  height: @scale*34px;
+  vertical-align: top;
+  border: 0;
+  display: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: @scale*55px;
+  margin: 0 auto;
+  z-index: 10;
+
+  >.search{
+   font-family: HelveticaNeueCyr-Roman;
+   border: @scale*1px solid @color-pink;
+   width: @scale*185px;
+   height: @scale*32px;
+   float: left;
+   padding: 0 @scale*10px;
+  }
+
+  >button{
+   height: @scale*34px;
+   width: @scale*80px;
+   font-size: @scale*16px;
+   border: @scale*1px solid @color-pink;
+   background: @color-pink;
+   vertical-align: top;
+   color: white;
+  }
+
+  >.result{
+   background: white;
+   width: @scale*287px;
+   color: @color-lightgray;
+
+   >.item{
+    font-family: HelveticaNeueCyr-Roman;
+    font-size: @scale*14px;
+    border-bottom: @scale*1px solid @color-lightgray2;
+    padding: @scale*10px 0 @scale*8px @scale*15px;
+
+    &:nth-last-of-type(1){
+     border: 0;
+    }
+   }
+  }
+ }
+}
+
+

@@ -1,0 +1,22 @@
+@import (less) "shop-config.less";
+
+.pager{
+ color: @color-lightgray;
+ font-family: HelveticaNeueCyr-Roman;
+ font-size: @scale*14px;
+ margin: @scale*15px @scale*25px @scale*15px @scale*5px;
+ text-align: center;
+
+ .page{
+  display: inline-block;
+  padding: @scale*6px @scale*6px @scale*3px;
+  border-radius: @scale*3px;
+  cursor: pointer;
+  background: @color-lightgray3;
+
+  &.sel{
+   color: white;
+   background: @color-pink;
+  }
+ }
+}

@@ -1,0 +1,17 @@
+doctype html
+html
+ head
+  title магаз
+  link(href="/css/shop_mob.css" rel="stylesheet" type="text/css")
+  link(href="/css/jq.swiper.css" rel="stylesheet" type="text/css")
+  meta(name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no")
+  script(src="/js/jquery.js")
+  script(src="/js/jquery.swiper.js")
+  script(src="/js/common.js")
+ body
+  .content-head
+   include shop-head.jade
+  .content-body.item
+   include shop-item.jade
+  .content-foot
+   include shop-foot.jade

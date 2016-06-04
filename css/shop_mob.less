@@ -1,0 +1,51 @@
+@import (less) "shop-config.less";
+
+@scale: 1;
+
+*{
+ margin: 0;
+ padding: 0;
+}
+
+.content-head{
+ @import (less) "shop-head.less";
+}
+
+.content-body{
+ @import (less) "shop-pager.less";
+
+ &.catalog{
+  @import (less) "shop-catalog.less";
+ }
+ &.item{
+  @import (less) "shop-item.less";
+ }
+}
+
+.content-foot{
+ @import (less) "shop-foot.less";
+}
+
+
+@media only screen and (min-width: 640px) {
+ @scale: 2;
+
+ .content-head{
+  @import (less) "shop-head_1.less"; // ln -s shop-head.less
+ }
+
+ .content-body{
+  @import (less) "shop-pager_1.less"; // ln ... etc
+
+  &.catalog{
+   @import (less) "shop-catalog_1.less";
+  }
+  &.item{
+   @import (less) "shop-item_1.less";
+  }
+ }
+
+ .content-foot{
+  @import (less) "shop-foot_1.less";
+ }
+}
